@@ -1,17 +1,17 @@
-yoyo-launcher (0.9) UNRELEASED; urgency=high
+cute-launcher (0.9) UNRELEASED; urgency=high
 
   * Update
 
- -- YoyoOS Packaging Team <admin@yzzi.icu>  Fri, 01 Jul 2022 11:13:07 +0800
+ -- CuteOS Packaging Team <admin@yzzi.icu>  Fri, 01 Jul 2022 11:13:07 +0800
 
-yoyo-launcher (0.8) UNRELEASED; urgency=high
+cute-launcher (0.8) UNRELEASED; urgency=high
 
   * Update
 
- -- YoyoOS Packaging Team <support@yoyoos.com>  Sat, 29 Jan 2022 03:28:29 +0800
+ -- CuteOS Packaging Team <support@cuteos.com>  Sat, 29 Jan 2022 03:28:29 +0800
 
-yoyo-launcher (0.5) UNRELEASED; urgency=high
+cute-launcher (0.5) UNRELEASED; urgency=high
 
-  * Initial release (YoyoOS)  <support@yoyoos.com>
+  * Initial release (CuteOS)  <support@cuteos.com>
 
- -- YoyoOS Packaging Team <support@yoyoos.com>  Thu, 16 Sep 2021 02:31:42 +0800
+ -- CuteOS Packaging Team <support@cuteos.com>  Thu, 16 Sep 2021 02:31:42 +0800

@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2021 YoyoOS.
+ * Copyright (C) 2021 CuteOS.
  *
- * Author:     Kate Leet <kate@yoyoos.com>
+ * Author:     Kate Leet <kate@cuteos.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@ public:
 
     Q_INVOKABLE void uninstall(const QString &desktopFile);
 
-    Q_INVOKABLE bool isYoyoOS();
+    Q_INVOKABLE bool isCuteOS();
 
 private:
     QDBusInterface m_iface;

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 YoyoOS.
+ * Copyright (C) 2021 CuteOS.
  *
  * Author:     revenmartin <revenmartin@gmail.com>
  *

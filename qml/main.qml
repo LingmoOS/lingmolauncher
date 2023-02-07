@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2021 YoyoOS.
+ * Copyright (C) 2021 CuteOS.
  *
- * Author:     Reoin Wong <reion@yoyoos.com>
+ * Author:     Reoin Wong <reion@cuteos.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,9 +23,9 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import QtGraphicalEffects 1.0
 
-import Yoyo.Launcher 1.0
-import Yoyo.System 1.0 as System
-import FishUI 1.0 as FishUI
+import Cute.Launcher 1.0
+import Cute.System 1.0 as System
+import CuteUI 1.0 as CuteUI
 
 Item {
     id: root
@@ -51,8 +51,8 @@ Item {
         property var desktopPath: ""
         property var appName: ""
 
-        width: _uninstallDialogLayout.implicitWidth + FishUI.Units.largeSpacing * 2
-        height: _uninstallDialogLayout.implicitHeight + FishUI.Units.largeSpacing * 2
+        width: _uninstallDialogLayout.implicitWidth + CuteUI.Units.largeSpacing * 2
+        height: _uninstallDialogLayout.implicitHeight + CuteUI.Units.largeSpacing * 2
 
         modal: true
 
@@ -62,8 +62,8 @@ Item {
         ColumnLayout {
             id: _uninstallDialogLayout
             anchors.centerIn: parent
-            anchors.margins: FishUI.Units.largeSpacing
-            spacing: FishUI.Units.largeSpacing * 1.5
+            anchors.margins: CuteUI.Units.largeSpacing
+            spacing: CuteUI.Units.largeSpacing * 1.5
 
             Label {
                 text: qsTr("Are you sure you want to uninstall %1 ?").arg(_uninstallDialog.appName)
@@ -71,7 +71,7 @@ Item {
             }
 
             RowLayout {
-                spacing: FishUI.Units.largeSpacing
+                spacing: CuteUI.Units.largeSpacing
 
                 Button {
                     text: qsTr("Cancel")
@@ -221,7 +221,7 @@ Item {
         Item {
             id: searchItem
             Layout.fillWidth: true
-            height: fontMetrics.height + FishUI.Units.largeSpacing
+            height: fontMetrics.height + CuteUI.Units.largeSpacing
 
             TextMetrics {
                 id: fontMetrics
@@ -234,8 +234,8 @@ Item {
                 width: searchItem.width * 0.2
                 height: parent.height
 
-                leftPadding: textField.activeFocus ? _placeImage.width + FishUI.Units.largeSpacing : FishUI.Units.largeSpacing
-                rightPadding: FishUI.Units.largeSpacing
+                leftPadding: textField.activeFocus ? _placeImage.width + CuteUI.Units.largeSpacing : CuteUI.Units.largeSpacing
+                rightPadding: CuteUI.Units.largeSpacing
 
                 selectByMouse: true
 
@@ -249,7 +249,7 @@ Item {
                     height: textField.height
                     width: _placeHolderLayout.implicitWidth
                     opacity: 0.6
-                    x: textField.activeFocus ? FishUI.Units.smallSpacing : (textField.width - placeHolderItem.width) / 2
+                    x: textField.activeFocus ? CuteUI.Units.smallSpacing : (textField.width - placeHolderItem.width) / 2
                     y: 0
 
                     Behavior on x {
@@ -264,7 +264,7 @@ Item {
 
                         Image {
                             id: _placeImage
-                            height: placeHolderItem.height - FishUI.Units.largeSpacing
+                            height: placeHolderItem.height - CuteUI.Units.largeSpacing
                             width: height
                             sourceSize: Qt.size(width, height)
                             source: "qrc:/images/system-search-symbolic.svg"
@@ -362,7 +362,7 @@ Item {
             currentIndex: appView.currentIndex
             onCurrentIndexChanged: appView.currentIndex = currentIndex
             interactive: true
-            spacing: FishUI.Units.largeSpacing
+            spacing: CuteUI.Units.largeSpacing
             Layout.alignment: Qt.AlignHCenter
             visible: appView.count > 1
 

@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2021 YoyoOS.
+ * Copyright (C) 2021 CuteOS.
  *
- * Author:     Reion Wong <reion@yoyoos.com>
+ * Author:     Reion Wong <reion@cuteos.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -47,7 +47,7 @@ static QByteArray detectDesktopEnvironment()
 LauncherModel::LauncherModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_fileWatcher(new QFileSystemWatcher(this))
-    , m_settings("yoyoos", "launcher-applist", this)
+    , m_settings("cuteos", "launcher-applist", this)
     , m_mode(NormalMode)
     , m_firstLoad(false)
 {
@@ -170,9 +170,9 @@ void LauncherModel::sendToDock(const QString &key)
     int index = findById(key);
 
     if (index != -1) {
-        QDBusMessage message = QDBusMessage::createMethodCall("com.yoyo.Dock",
+        QDBusMessage message = QDBusMessage::createMethodCall("com.cute.Dock",
                                                               "/Dock",
-                                                              "com.yoyo.Dock",
+                                                              "com.cute.Dock",
                                                                "add");
         message.setArguments(QList<QVariant>() << key);
         QDBusConnection::sessionBus().asyncCall(message);
@@ -198,9 +198,9 @@ void LauncherModel::removeFromDock(const QString &desktop)
     int index = findById(desktop);
 
     if (index != -1) {
-        QDBusMessage message = QDBusMessage::createMethodCall("com.yoyo.Dock",
+        QDBusMessage message = QDBusMessage::createMethodCall("com.cute.Dock",
                                                               "/Dock",
-                                                              "com.yoyo.Dock",
+                                                              "com.cute.Dock",
                                                                "remove");
         message.setArguments(QList<QVariant>() << desktop);
         QDBusConnection::sessionBus().asyncCall(message);
@@ -299,8 +299,8 @@ bool LauncherModel::launch(const QString &path)
         }
 
         // Because launcher has hidden animation,
-        // yoyo-screenshot needs to be processed.
-        if (cmd == "yoyo-screenshot") {
+        // cute-screenshot needs to be processed.
+        if (cmd == "cute-screenshot") {
             ProcessProvider::startDetached(cmd, QStringList() << "-d" << "200");
         } else {
             ProcessProvider::startDetached(cmd, args);

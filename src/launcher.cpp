@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 YoyoOS.
+ * Copyright (C) 2021 CuteOS.
  *
  * Author:     revenmartin <revenmartin@gmail.com>
  *
@@ -33,9 +33,9 @@
 
 Launcher::Launcher(bool firstShow, QQuickView *w)
     : QQuickView(w)
-    , m_dockInterface("com.yoyo.Dock",
+    , m_dockInterface("com.cute.Dock",
                     "/Dock",
-                    "com.yoyo.Dock", QDBusConnection::sessionBus())
+                    "com.cute.Dock", QDBusConnection::sessionBus())
     , m_hideTimer(new QTimer)
     , m_showed(false)
     , m_leftMargin(0)
@@ -67,7 +67,7 @@ Launcher::Launcher(bool firstShow, QQuickView *w)
         connect(&m_dockInterface, SIGNAL(primaryGeometryChanged()), this, SLOT(updateMargins()));
         connect(&m_dockInterface, SIGNAL(directionChanged()), this, SLOT(updateMargins()));
     } else {
-        QDBusServiceWatcher *watcher = new QDBusServiceWatcher("com.yoyo.Dock",
+        QDBusServiceWatcher *watcher = new QDBusServiceWatcher("com.cute.Dock",
                                                                QDBusConnection::sessionBus(),
                                                                QDBusServiceWatcher::WatchForUnregistration,
                                                                this);
@@ -130,9 +130,9 @@ bool Launcher::dockAvailable()
 
 bool Launcher::isPinedDock(const QString &desktop)
 {
-    QDBusInterface iface("com.yoyo.Dock",
+    QDBusInterface iface("com.cute.Dock",
                          "/Dock",
-                         "com.yoyo.Dock",
+                         "com.cute.Dock",
                          QDBusConnection::sessionBus());
 
     if (!iface.isValid())

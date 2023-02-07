@@ -1,8 +1,8 @@
 # Launcher
 
-YoyoOS's full-screen application launcher.
+CuteOS's full-screen application launcher.
 
-[![Build](https://github.com/Yoyo-OS/launcher/actions/workflows/build.yml/badge.svg)](https://github.com/Yoyo-OS/launcher/actions/workflows/build.yml)
+[![Build](https://github.com/Cute-OS/launcher/actions/workflows/build.yml/badge.svg)](https://github.com/Cute-OS/launcher/actions/workflows/build.yml)
 
 ## Dependencies
 Arch Linux/Manjaro Dependencies

@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2021 YoyoOS.
+ * Copyright (C) 2021 CuteOS.
  *
- * Author:     Reoin Wong <reion@yoyoos.com>
+ * Author:     Reoin Wong <reion@cuteos.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,9 +20,9 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
-import FishUI 1.0 as FishUI
+import CuteUI 1.0 as CuteUI
 
-import Yoyo.Launcher 1.0
+import Cute.Launcher 1.0
 
 ListView {
     id: control
@@ -32,7 +32,7 @@ ListView {
     property var sourceModel: launcherModel
     property var modelCount: sourceModel.count
 
-    property int iconSize: root.iconSize + FishUI.Units.largeSpacing * 2
+    property int iconSize: root.iconSize + CuteUI.Units.largeSpacing * 2
     property int cellWidth: iconSize + calcExtraSpacing(iconSize, control.width)
     property int cellHeight: iconSize + calcExtraSpacing(iconSize, control.height)
 

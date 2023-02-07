@@ -1,7 +1,7 @@
-Source: yoyo-launcher
+Source: cute-launcher
 Section: devel
 Priority: optional
-Maintainer: YoyoOS <support@yoyoos.com>
+Maintainer: CuteOS <support@cuteos.com>
 Build-Depends: cmake,
                debhelper (>= 9),
                extra-cmake-modules,
@@ -12,9 +12,9 @@ Build-Depends: cmake,
                qttools5-dev,
                qttools5-dev-tools
 Standards-Version: 4.5.0
-Homepage: https://yoyoos.com
+Homepage: https://cuteos.com
 
-Package: yoyo-launcher
+Package: cute-launcher
 Architecture: any
 Depends: qml-module-qtquick-controls2,
          qml-module-qtquick2,
@@ -26,4 +26,4 @@ Depends: qml-module-qtquick-controls2,
          qml-module-qtquick-shapes,
          ${misc:Depends},
          ${shlibs:Depends}
-Description: YoyoOS Launcher
+Description: CuteOS Launcher

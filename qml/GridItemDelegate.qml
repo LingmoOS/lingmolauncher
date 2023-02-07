@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2021 YoyoOS.
+ * Copyright (C) 2021 CuteOS.
  *
- * Author:     Reoin Wong <reion@yoyoos.com>
+ * Author:     Reoin Wong <reion@cuteos.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,8 +22,8 @@ import QtQuick.Controls 2.12
 import QtGraphicalEffects 1.0
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.12
-import FishUI 1.0 as FishUI
-import Yoyo.Launcher 1.0
+import CuteUI 1.0 as CuteUI
+import Cute.Launcher 1.0
 
 Item {
     id: control
@@ -38,7 +38,7 @@ Item {
 
     Drag.active: iconMouseArea.drag.active
     Drag.mimeData: [model.appId]
-    Drag.keys: ["yoyo-launcher"]
+    Drag.keys: ["cute-launcher"]
     Drag.dragType: Drag.Automatic
     Drag.supportedActions: Qt.MoveAction
     Drag.hotSpot.x: icon.width / 2
@@ -91,7 +91,7 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: parent.top
         anchors.bottom: label.top
-        anchors.margins: FishUI.Units.largeSpacing * 2
+        anchors.margins: CuteUI.Units.largeSpacing * 2
 
         width: height
         height: width
@@ -109,7 +109,7 @@ Item {
         }
     }
 
-    FishUI.DesktopMenu {
+    CuteUI.DesktopMenu {
         id: _itemMenu
 
         MenuItem {
@@ -166,7 +166,7 @@ Item {
             if (mouse.button == Qt.LeftButton)
                 launcherModel.launch(model.appId)
             else if (mouse.button == Qt.RightButton) {
-                uninstallItem.visible = appManager.isYoyoOS()
+                uninstallItem.visible = appManager.isCuteOS()
                 _itemMenu.updateActions()
                 _itemMenu.popup()
             }
@@ -207,10 +207,10 @@ Item {
         anchors {
             horizontalCenter: parent.horizontalCenter
             bottom: label.top
-            bottomMargin: FishUI.Units.smallSpacing
+            bottomMargin: CuteUI.Units.smallSpacing
         }
 
-        color: FishUI.Theme.highlightColor
+        color: CuteUI.Theme.highlightColor
         radius: height / 2
     }
 
@@ -220,7 +220,7 @@ Item {
         anchors {
             horizontalCenter: parent.horizontalCenter
             bottom: parent.bottom
-            margins: FishUI.Units.smallSpacing
+            margins: CuteUI.Units.smallSpacing
         }
 
         visible: !dragStarted
@@ -232,7 +232,7 @@ Item {
         wrapMode: "WordWrap"
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
-        width: parent.width - 2 * FishUI.Units.smallSpacing
+        width: parent.width - 2 * CuteUI.Units.smallSpacing
         height: fontMetrics.height * 2
         color: "white"
 

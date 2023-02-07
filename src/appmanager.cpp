@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2021 YoyoOS.
+ * Copyright (C) 2021 CuteOS.
  *
- * Author:     Kate Leet <kate@yoyoos.com>
+ * Author:     Kate Leet <kate@cuteos.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,9 +22,9 @@
 
 AppManager::AppManager(QObject *parent)
     : QObject(parent)
-    , m_iface("com.yoyo.Daemon",
+    , m_iface("com.cute.Daemon",
               "/AppManager",
-              "com.yoyo.AppManager", QDBusConnection::systemBus())
+              "com.cute.AppManager", QDBusConnection::systemBus())
 {
 
 }
@@ -36,7 +36,7 @@ void AppManager::uninstall(const QString &desktopFile)
     }
 }
 
-bool AppManager::isYoyoOS()
+bool AppManager::isCuteOS()
 {
-    return QFile::exists("/etc/yoyoos");
+    return QFile::exists("/etc/cuteos");
 }
