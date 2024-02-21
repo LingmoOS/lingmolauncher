@@ -38,7 +38,7 @@ Item {
 
     Drag.active: iconMouseArea.drag.active
     Drag.mimeData: [model.appId]
-    Drag.keys: ["cute-launcher"]
+    Drag.keys: ["lingmo-launcher"]
     Drag.dragType: Drag.Automatic
     Drag.supportedActions: Qt.MoveAction
     Drag.hotSpot.x: icon.width / 2

@@ -22,9 +22,9 @@
 
 AppManager::AppManager(QObject *parent)
     : QObject(parent)
-    , m_iface("com.cute.Daemon",
+    , m_iface("com.lingmo.Daemon",
               "/AppManager",
-              "com.cute.AppManager", QDBusConnection::systemBus())
+              "com.lingmo.AppManager", QDBusConnection::systemBus())
 {
 
 }

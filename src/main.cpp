@@ -34,9 +34,9 @@
 #include <QTranslator>
 #include <QLocale>
 
-#define DBUS_NAME "com.cute.Launcher"
+#define DBUS_NAME "com.lingmo.Launcher"
 #define DBUS_PATH "/Launcher"
-#define DBUS_INTERFACE "com.cute.Launcher"
+#define DBUS_INTERFACE "com.lingmo.Launcher"
 
 int main(int argc, char *argv[])
 {
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 #endif
 
     QApplication app(argc, argv);
-    app.setApplicationName(QStringLiteral("cute-launcher"));
+    app.setApplicationName(QStringLiteral("lingmo-launcher"));
 
     QPixmapCache::setCacheLimit(2048);
 
@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
     }
 
     QLocale locale;
-    QString qmFilePath = QString("%1/%2.qm").arg("/usr/share/cute-launcher/translations/").arg(locale.name());
+    QString qmFilePath = QString("%1/%2.qm").arg("/usr/share/lingmo-launcher/translations/").arg(locale.name());
     if (QFile::exists(qmFilePath)) {
         QTranslator *translator = new QTranslator(app.instance());
         if (translator->load(qmFilePath)) {

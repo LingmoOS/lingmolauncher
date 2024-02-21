@@ -33,9 +33,9 @@
 
 Launcher::Launcher(bool firstShow, QQuickView *w)
     : QQuickView(w)
-    , m_dockInterface("com.cute.Dock",
+    , m_dockInterface("com.lingmo.Dock",
                     "/Dock",
-                    "com.cute.Dock", QDBusConnection::sessionBus())
+                    "com.lingmo.Dock", QDBusConnection::sessionBus())
     , m_hideTimer(new QTimer)
     , m_showed(false)
     , m_leftMargin(0)
@@ -67,7 +67,7 @@ Launcher::Launcher(bool firstShow, QQuickView *w)
         connect(&m_dockInterface, SIGNAL(primaryGeometryChanged()), this, SLOT(updateMargins()));
         connect(&m_dockInterface, SIGNAL(directionChanged()), this, SLOT(updateMargins()));
     } else {
-        QDBusServiceWatcher *watcher = new QDBusServiceWatcher("com.cute.Dock",
+        QDBusServiceWatcher *watcher = new QDBusServiceWatcher("com.lingmo.Dock",
                                                                QDBusConnection::sessionBus(),
                                                                QDBusServiceWatcher::WatchForUnregistration,
                                                                this);
@@ -130,9 +130,9 @@ bool Launcher::dockAvailable()
 
 bool Launcher::isPinedDock(const QString &desktop)
 {
-    QDBusInterface iface("com.cute.Dock",
+    QDBusInterface iface("com.lingmo.Dock",
                          "/Dock",
-                         "com.cute.Dock",
+                         "com.lingmo.Dock",
                          QDBusConnection::sessionBus());
 
     if (!iface.isValid())
