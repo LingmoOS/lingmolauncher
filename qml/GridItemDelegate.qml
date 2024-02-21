@@ -22,8 +22,8 @@ import QtQuick.Controls 2.12
 import QtGraphicalEffects 1.0
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.12
-import CuteUI 1.0 as CuteUI
-import Cute.Launcher 1.0
+import LingmoUI 1.0 as CuteUI
+import Lingmo.Launcher 1.0
 
 Item {
     id: control

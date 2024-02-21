@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
-    QByteArray uri = "Cute.Launcher";
+    QByteArray uri = "Lingmo.Launcher";
     qmlRegisterType<LauncherModel>(uri, 1, 0, "LauncherModel");
     qmlRegisterType<PageModel>(uri, 1, 0, "PageModel");
     qmlRegisterType<IconItem>(uri, 1, 0, "IconItem");

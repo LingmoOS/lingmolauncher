@@ -20,9 +20,9 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
-import CuteUI 1.0 as CuteUI
+import LingmoUI 1.0 as CuteUI
 
-import Cute.Launcher 1.0
+import Lingmo.Launcher 1.0
 
 ListView {
     id: control
